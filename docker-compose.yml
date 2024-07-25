@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: Dockerfile
       shm_size: "64gb"
-    command: bash -c "python infer-web.py"
+    command: bash -c "python infer-web.py && python ./tools/download_models.py"
     container_name: rvc
     volumes:
       - ./opt:/app/opt
