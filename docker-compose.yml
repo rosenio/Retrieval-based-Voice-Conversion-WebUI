@@ -4,10 +4,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      shm_size: '64gb'
+      shm_size: 64gb
     container_name: rvc
     volumes:
-      - ./weights:/app/weights
       - ./opt:/app/opt
       - ./assets:/app/assets
       - ./logs:/app/logs
