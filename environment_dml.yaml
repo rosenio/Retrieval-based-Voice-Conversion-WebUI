@@ -183,4 +183,4 @@ dependencies:
       - torchaudio==2.0.1
       - torchvision==0.15.1
       - wget==3.2
-prefix: D:\ProgramData\anaconda3_\envs\pydml
+prefix: c:\Users\rosenio\miniconda\envs\pydml
