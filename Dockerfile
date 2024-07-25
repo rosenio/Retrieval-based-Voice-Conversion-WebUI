@@ -25,12 +25,14 @@ RUN apt-get install -y git
 
 RUN ln -s /usr/bin/python3 /usr/bin/python
 RUN python -m pip install requests
-RUN python ./tools/download_models.py
 
-RUN python3 -m pip install --no-cache-dir -r requirements.txt
 
-RUN 
 
 VOLUME [ "/app/weights", "/app/opt", "/app/logs", "/app/assets", "/app/configs" ]
+
+RUN python ./tools/download_models.py
+RUN python3 -m pip install --no-cache-dir -r requirements.txt
+
+
 
 CMD ["python3", "infer-web.py"]
