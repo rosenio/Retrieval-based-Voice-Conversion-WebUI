@@ -4,7 +4,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      shm_size: 64gb
+      shm_size: "64gb"
+    command: bash -c "python infer-web.py"
+    gpus: all
     container_name: rvc
     volumes:
       - ./opt:/app/opt

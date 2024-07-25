@@ -31,8 +31,8 @@ RUN python -m pip install requests
 VOLUME [ "/app/weights", "/app/opt", "/app/logs", "/app/assets", "/app/configs" ]
 
 
-RUN python3 -m pip install --no-cache-dir -r requirements.txt
+RUN python -m pip install --no-cache-dir -r requirements.txt
+RUN python ./tools/download_models.py
 
 
-
-CMD ["python3", "infer-web.py"]
+CMD ["python", "infer-web.py"]
